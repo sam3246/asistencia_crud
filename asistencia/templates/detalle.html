@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de la Asistencia</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: #f1f5f9;
+        color: #1e293b;
+        margin: 0;
+        padding: 40px 16px;
+        min-height: 100vh;
+    }
+
+    .card {
+        max-width: 480px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 32px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 1.8rem;
+        margin: 0 0 28px;
+        color: #0f172a;
+    }
+
+    .detail-item {
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .detail-item span {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #64748b;
+    }
+
+    .detail-item p {
+        margin: 0;
+        font-size: 1.05rem;
+        line-height: 1.5;
+        color: #1e293b;
+        word-break: break-word;
+    }
+
+    .footer-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin-top: 28px;
+    }
+
+    .link-back {
+        font-size: 0.9rem;
+        color: #64748b;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .link-back:hover {
+        color: #1e293b;
+        text-decoration: underline;
+    }
+
+    .btn-edit {
+        padding: 10px 24px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #ffffff;
+        background: #3b82f6;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn-edit:hover {
+        background: #2563eb;
+    }
+
+    .btn-edit:active {
+        transform: scale(0.98);
+    }
+
+    @media (max-width: 520px) {
+        .card {
+            padding: 24px 18px;
+        }
+
+        .footer-actions {
+            flex-direction: column-reverse;
+        }
+
+        .btn-edit {
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Detalle de la Asistencia</h1>
+
+        <div class="detail-item">
+            <span>Tipo de Documento</span>
+            <p>{{ Asistencia.tipo_documento }}</p>
+        </div>
+
+        <div class="detail-item">
+            <span>Documento</span>
+            <p>{{ Asistencia.documento }}</p>
+        </div>
+
+        <div class="detail-item">
+            <span>Nombres</span>
+            <p>{{ Asistencia.nombres }}</p>
+        </div>
+
+        <div class="detail-item">
+            <span>Apellidos</span>
+            <p>{{ Asistencia.apellidos }}</p>
+        </div>
+
+        <div class="detail-item">
+            <span>WhatsApp</span>
+            <p>{{ Asistencia.whatsapp }}</p>
+        </div>
+
+        <div class="detail-item">
+            <span>Fecha</span>
+            <p>{{ Asistencia.fecha }}</p>
+        </div>
+
+        <div class="detail-item">
+            <span>Asistencia</span>
+            <p>{{ Asistencia.asistencia }}</p>
+        </div>
+
+        <div class="footer-actions">
+            <a href="/asistencias/lista/" class="link-back">← Volver al listado</a>
+            <a href="/asistencias/editar/{{ Asistencia.id }}/" class="btn-edit">Editar</a>
+        </div>
+    </div>
+
+</body>
+</html>

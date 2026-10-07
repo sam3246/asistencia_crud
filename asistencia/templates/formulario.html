@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Asistencia</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: #f1f5f9;
+        color: #1e293b;
+        margin: 0;
+        padding: 40px 16px;
+        min-height: 100vh;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 1.8rem;
+        margin: 0 0 24px;
+        color: #0f172a;
+    }
+
+    form {
+        max-width: 480px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 32px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #475569;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px 14px;
+        font-size: 1rem;
+        color: #1e293b;
+        background: #f8fafc;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    input[type="text"]:focus {
+        outline: none;
+        background: #ffffff;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 12px;
+        margin-top: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #ffffff;
+        background: #3b82f6;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn-submit:hover {
+        background: #2563eb;
+    }
+
+    .btn-submit:active {
+        transform: scale(0.98);
+    }
+
+    .back-link {
+        display: block;
+        margin-top: 16px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #64748b;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .back-link:hover {
+        color: #1e293b;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 520px) {
+        form {
+            padding: 24px 18px;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <h1>{% if Asistencia %}Editar{% else %}Nuevo{% endif %} Asistencia</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="tipo_documento">Tipo de Documento</label>
+            <input type="text" id="tipo_documento" name="tipo_documento" value="{{ Asistencia.tipo_documento|default:'' }}" required autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label for="documento">Documento</label>
+            <input type="text" id="documento" name="documento" value="{{ Asistencia.documento|default:'' }}" required autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label for="nombres">Nombres</label>
+            <input type="text" id="nombres" name="nombres" value="{{ Asistencia.nombres|default:'' }}" required autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" value="{{ Asistencia.apellidos|default:'' }}" required autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label for="whatsapp">WhatsApp</label>
+            <input type="text" id="whatsapp" name="whatsapp" value="{{ Asistencia.whatsapp|default:'' }}" required autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha" value="{{ Asistencia.fecha|default:'' }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="asistencia">Asistencia</label>
+            <input type="text" id="asistencia" name="asistencia" value="{{ Asistencia.asistencia|default:'' }}" required autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn-submit">Guardar</button>
+        <a href="/asistencia/lista/" class="back-link">Cancelar y volver</a>
+    </form>
+
+</body>
+</html>
