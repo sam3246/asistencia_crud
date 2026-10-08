@@ -43,8 +43,10 @@
         height: 40px;
         border-radius: 8px;
         border: 1px solid #cbd5e1;
-        color: #1e293b;
+        color: #2d2d2d;
         background: #f8fafc;
+        padding-left: 10px;
+        font-size: 1rem;
     }
 
     label {
@@ -156,7 +158,7 @@
         <div class="form-group">
             <label for="asistencia">Asistencia</label>
             <select name="asistencia" id="asistencia" class="fecha" required>
-                <option value="">Seleccione...</option>
+                <option value="">Seleccione una Opción</option>
                 <option value="True" {% if Asistencia.asistencia == "True" %}selected{% endif %}>Presente</option>
                 <option value="False" {% if Asistencia.asistencia == "False" %}selected{% endif %}>Ausente</option>
             </select>
