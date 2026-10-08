@@ -10,9 +10,9 @@
     }
 
     body {
-        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-        background: #f1f5f9;
-        color: #1e293b;
+        font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+        background: linear-gradient(160deg, #fdf8ef 0%, #eaf6ef 100%);
+        color: #3d4a43;
         margin: 0;
         padding: 40px 16px;
         min-height: 100vh;
@@ -31,113 +31,133 @@
         justify-content: space-between;
         align-items: center;
         gap: 12px;
-        margin-bottom: 24px;
+        margin-bottom: 26px;
     }
 
     h1 {
         margin: 0;
-        font-size: 1.8rem;
-        color: #0f172a;
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: #2f6b55;
+        letter-spacing: 0.01em;
     }
 
     .btn {
         display: inline-block;
-        padding: 10px 20px;
+        padding: 10px 24px;
         font-size: 0.95rem;
-        font-weight: 600;
-        border-radius: 8px;
+        font-weight: 700;
+        border-radius: 999px;
         text-decoration: none;
-        transition: background 0.2s, transform 0.1s;
+        transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
     }
 
     .btn-primary {
         color: #ffffff;
-        background: #3b82f6;
+        background: #f59a84;
+        box-shadow: 0 4px 12px rgba(245, 154, 132, 0.4);
     }
 
     .btn-primary:hover {
-        background: #2563eb;
+        background: #ee8068;
+        box-shadow: 0 6px 16px rgba(238, 128, 104, 0.45);
     }
 
     .btn:active {
-        transform: scale(0.98);
+        transform: scale(0.97);
     }
 
     .card {
-        background: #ffffff;
-        padding: 20px 24px;
-        margin-bottom: 16px;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+        background: #fffdf9;
+        padding: 22px 26px;
+        margin-bottom: 18px;
+        border-radius: 22px;
+        border: 1px solid #e6efe8;
+        border-top: 6px solid #8fd3b6;
+        box-shadow: 0 12px 32px rgba(94, 160, 130, 0.15);
         transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+        transform: translateY(-3px);
+        box-shadow: 0 16px 38px rgba(94, 160, 130, 0.22);
     }
 
     .card h3 {
-        margin: 0 0 6px;
+        margin: 0 0 12px;
         font-size: 1.2rem;
-        color: #0f172a;
+        font-weight: 700;
+        color: #2f6b55;
     }
 
     .card p {
-        margin: 0;
+        margin: 0 0 8px;
+        padding: 8px 14px;
         font-size: 0.95rem;
         line-height: 1.5;
-        color: #64748b;
+        color: #34453c;
+        background: #f3faf6;
+        border-left: 4px solid #a8dcc4;
+        border-radius: 10px;
         word-break: break-word;
+    }
+
+    .card p strong {
+        margin-right: 4px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #6aa88c;
     }
 
     .actions {
         display: flex;
         gap: 8px;
         margin-top: 16px;
-        padding-top: 14px;
-        border-top: 1px solid #e2e8f0;
+        padding-top: 16px;
+        border-top: 1px dashed #cfe5d8;
     }
 
     .actions a {
-        padding: 6px 14px;
+        padding: 7px 16px;
         font-size: 0.85rem;
-        font-weight: 600;
-        color: #3b82f6;
-        background: #eff6ff;
-        border-radius: 6px;
+        font-weight: 700;
+        color: #2f6b55;
+        background: #e3f4eb;
+        border-radius: 999px;
         text-decoration: none;
         transition: background 0.2s, color 0.2s;
     }
 
     .actions a:hover {
-        background: #dbeafe;
-        color: #2563eb;
+        background: #cdebdc;
+        color: #245543;
     }
 
     .actions a.delete {
         margin-left: auto;
-        color: #dc2626;
-        background: #fef2f2;
+        color: #c0614d;
+        background: #fdebe6;
     }
 
     .actions a.delete:hover {
-        background: #fee2e2;
-        color: #b91c1c;
+        background: #fad8cf;
+        color: #a24a38;
     }
 
     .empty-state {
         padding: 48px 24px;
         text-align: center;
-        background: #ffffff;
-        border: 2px dashed #cbd5e1;
-        border-radius: 12px;
+        background: #fffdf9;
+        border: 2px dashed #a8dcc4;
+        border-radius: 22px;
     }
 
     .empty-state p {
         margin: 0;
         font-size: 1rem;
-        color: #64748b;
+        color: #7a8f84;
     }
 
     @media (max-width: 520px) {

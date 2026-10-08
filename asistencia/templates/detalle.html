@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle de la Asistencia</title>
-    <style>
+   <style>
     * {
         box-sizing: border-box;
     }
 
     body {
-        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-        background: #f1f5f9;
-        color: #1e293b;
+        font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+        background: linear-gradient(160deg, #fdf8ef 0%, #eaf6ef 100%);
+        color: #3d4a43;
         margin: 0;
         padding: 40px 16px;
         min-height: 100vh;
@@ -21,40 +21,46 @@
     .card {
         max-width: 480px;
         margin: 0 auto;
-        background: #ffffff;
-        padding: 32px;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+        background: #fffdf9;
+        padding: 36px 32px 32px;
+        border-radius: 22px;
+        border: 1px solid #e6efe8;
+        border-top: 6px solid #8fd3b6;
+        box-shadow: 0 12px 32px rgba(94, 160, 130, 0.15);
     }
 
     h1 {
         text-align: center;
-        font-size: 1.8rem;
-        margin: 0 0 28px;
-        color: #0f172a;
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin: 0 0 30px;
+        color: #2f6b55;
+        letter-spacing: 0.01em;
     }
 
     .detail-item {
-        margin-bottom: 20px;
-        padding-bottom: 16px;
-        border-bottom: 1px solid #e2e8f0;
+        margin-bottom: 14px;
+        padding: 12px 16px;
+        background: #f3faf6;
+        border-left: 4px solid #a8dcc4;
+        border-radius: 10px;
     }
 
     .detail-item span {
         display: block;
         margin-bottom: 4px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        letter-spacing: 0.05em;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: #64748b;
+        color: #6aa88c;
     }
 
     .detail-item p {
         margin: 0;
         font-size: 1.05rem;
         line-height: 1.5;
-        color: #1e293b;
+        color: #34453c;
         word-break: break-word;
     }
 
@@ -63,43 +69,45 @@
         justify-content: space-between;
         align-items: center;
         gap: 12px;
-        margin-top: 28px;
+        margin-top: 30px;
     }
 
     .link-back {
         font-size: 0.9rem;
-        color: #64748b;
+        color: #7a8f84;
         text-decoration: none;
         transition: color 0.2s;
     }
 
     .link-back:hover {
-        color: #1e293b;
+        color: #2f6b55;
         text-decoration: underline;
     }
 
     .btn-edit {
-        padding: 10px 24px;
+        padding: 10px 26px;
         font-size: 0.95rem;
-        font-weight: 600;
+        font-weight: 700;
         color: #ffffff;
-        background: #3b82f6;
-        border-radius: 8px;
+        background: #f59a84;
+        border-radius: 999px;
         text-decoration: none;
-        transition: background 0.2s, transform 0.1s;
+        box-shadow: 0 4px 12px rgba(245, 154, 132, 0.4);
+        transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
     }
 
     .btn-edit:hover {
-        background: #2563eb;
+        background: #ee8068;
+        box-shadow: 0 6px 16px rgba(238, 128, 104, 0.45);
     }
 
     .btn-edit:active {
-        transform: scale(0.98);
+        transform: scale(0.97);
     }
 
     @media (max-width: 520px) {
         .card {
-            padding: 24px 18px;
+            padding: 28px 18px 24px;
         }
 
         .footer-actions {
